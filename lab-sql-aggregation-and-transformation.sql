@@ -1,19 +1,19 @@
 /* CHALLENGE 1 */
 
-/* 1. You need to use SQL built-in functions to gain insights relating to the duration of movies: */
+/* 1 You need to use SQL built-in functions to gain insights relating to the duration of movies: */
 
 /* 1.1 Determine the shortest and longest movie durations and name the values as max_duration and min_duration. */
 
 SELECT MIN(length) as 'min_duration' from film;
 SELECT MAX(length) as 'max_duration' from film;
 
-/* .2. Express the average movie duration in hours and minutes. Don't use decimals. */
+/* 1.2 Express the average movie duration in hours and minutes. Don't use decimals. */
 
 select (floor((round(avg(length))/60)) ) as hour,
       (round(avg(length))%60) as `minutes`
 from film;
 
-/* 2. You need to gain insights related to rental dates: */
+/* 2 You need to gain insights related to rental dates: */
 
 /* 2.1 Calculate the number of days that the company has been operating. */
 
